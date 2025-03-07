@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.png";
+import logo from "../../assets/nuschLogo.png";
 
 export function Footer() {
   const handleScrollToSection = (id: string) => {

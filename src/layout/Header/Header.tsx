@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/nuschLogo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +40,7 @@ export const Header = () => {
         <img
           src={logo}
           alt="logo"
-          className="w-20 hover:scale-105 transition-all"
+          className="w-12 hover:scale-105 transition-all"
         />
       </a>
 
