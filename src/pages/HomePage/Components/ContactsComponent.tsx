@@ -77,7 +77,7 @@ export const ContactsComponent = () => {
         </DialogHeader>
         <DialogBody {...({} as any)} className="text-darkBlue text-center">
           Запис дитини до школи: Надішліть листа на електронну адресу
-          <strong>nuschdarmstadt@gmx.de</strong> з інформацією про вашу дитину
+          <strong> nuschdarmstadt@gmx.de</strong> з інформацією про вашу дитину
           та контактними даними.
         </DialogBody>
         <DialogFooter {...({} as any)}>
