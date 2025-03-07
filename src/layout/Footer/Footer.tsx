@@ -41,7 +41,7 @@ export function Footer() {
             className="hover:scale-105 cursor-pointer"
           >
             <a className="font-normal text-darkBlue transition-all hover:text-white">
-              Рокзлад
+              Розклад
             </a>
           </li>
           <li

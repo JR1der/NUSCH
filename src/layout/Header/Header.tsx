@@ -9,7 +9,7 @@ export const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       let moving = window.pageYOffset;
-      setVisible(position > moving || moving === 0);
+      setVisible(position > moving);
       setPosition(moving);
     };
     window.addEventListener("scroll", handleScroll);
