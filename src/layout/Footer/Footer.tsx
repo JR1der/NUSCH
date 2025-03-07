@@ -13,13 +13,13 @@ export function Footer() {
 
   return (
     <footer className="w-full bg-lightYellow p-8 border-t-4 border-darkBlue">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between">
+      <div className="flex flex-col items-center justify-center gap-y-6 md:flex-row md:justify-between">
         <img
           src={logo}
           alt="logo-ct"
           className="w-10 hover:scale-105 cursor-pointer"
         />
-        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
+        <ul className="flex flex-col md:flex-row items-center gap-y-2 gap-x-8">
           <li
             onClick={() => handleScrollToSection("about-us")}
             className="hover:scale-105 cursor-pointer"

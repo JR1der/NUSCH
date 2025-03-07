@@ -57,7 +57,7 @@ export const TeacherAdd = () => {
             <DialogBody {...({} as any)} className="text-darkBlue text-center">
               Якщо ви професійний педагог і бажаєте стати частиною нашої
               команди, надішліть своє резюме на електронну адресу
-              <strong>nuschdarmstadt@gmx.de</strong>.
+              <strong> nuschdarmstadt@gmx.de</strong>.
             </DialogBody>
             <DialogFooter {...({} as any)}>
               <Button

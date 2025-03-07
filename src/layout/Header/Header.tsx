@@ -9,8 +9,7 @@ export const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       let moving = window.pageYOffset;
-
-      setVisible(position > moving);
+      setVisible(position > moving || moving === 0);
       setPosition(moving);
     };
     window.addEventListener("scroll", handleScroll);
@@ -21,12 +20,12 @@ export const Header = () => {
 
   const handleScrollToSection = (id: string) => {
     const section = document.getElementById(id);
-    if (section && isMenuOpen) {
+    if (section) {
       const yOffset = -100;
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: "smooth" });
-      setIsMenuOpen(false);
+      if (isMenuOpen) setIsMenuOpen(false);
     }
   };
 
@@ -108,25 +107,25 @@ export const Header = () => {
         style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
       >
         <li
-          onClick={() => handleScrollToSection("about-us")}
+          onClick={() => isMenuOpen && handleScrollToSection("about-us")}
           className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
         >
           Про нас
         </li>
         <li
-          onClick={() => handleScrollToSection("studying")}
+          onClick={() => isMenuOpen && handleScrollToSection("studying")}
           className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
         >
           Навчання
         </li>
         <li
-          onClick={() => handleScrollToSection("schedule")}
+          onClick={() => isMenuOpen && handleScrollToSection("schedule")}
           className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
         >
           Розклад
         </li>
         <li
-          onClick={() => handleScrollToSection("join")}
+          onClick={() => isMenuOpen && handleScrollToSection("join")}
           className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
         >
           Приєднатись
