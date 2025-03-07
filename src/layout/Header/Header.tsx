@@ -21,8 +21,11 @@ export const Header = () => {
 
   const handleScrollToSection = (id: string) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (section && isMenuOpen) {
+      const yOffset = -100;
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
       setIsMenuOpen(false);
     }
   };
@@ -34,7 +37,7 @@ export const Header = () => {
       className={`${cls} sticky top-0 z-20 flex justify-between items-center text-black py-2 px-8 md:px-28 bg-lightBlue drop-shadow-md transition-all`}
     >
       {/* Logo */}
-      <a href="#">
+      <a onClick={() => handleScrollToSection("start")}>
         <img
           src={logo}
           alt="logo"
@@ -50,13 +53,22 @@ export const Header = () => {
         >
           Про нас
         </li>
-        <li className="p-3 hover:bg-darkBlue hover:text-white text-darkBlue hover:scale-105 rounded-lg transition-all cursor-pointer">
-          Колектив
+        <li
+          onClick={() => handleScrollToSection("studying")}
+          className="p-3 hover:bg-darkBlue hover:text-white text-darkBlue hover:scale-105 rounded-lg transition-all cursor-pointer"
+        >
+          Навчання
         </li>
-        <li className="p-3 hover:bg-darkBlue hover:text-white text-darkBlue hover:scale-105 rounded-lg transition-all cursor-pointer">
-          Школа
+        <li
+          onClick={() => handleScrollToSection("schedule")}
+          className="p-3 hover:bg-darkBlue hover:text-white text-darkBlue hover:scale-105 rounded-lg transition-all cursor-pointer"
+        >
+          Розклад
         </li>
-        <li className="p-3 hover:bg-darkBlue hover:text-white text-darkBlue hover:scale-105 rounded-lg transition-all cursor-pointer">
+        <li
+          onClick={() => handleScrollToSection("join")}
+          className="p-3 hover:bg-darkBlue hover:text-white text-darkBlue hover:scale-105 rounded-lg transition-all cursor-pointer"
+        >
           Приєднатись
         </li>
       </ul>
@@ -73,7 +85,7 @@ export const Header = () => {
             <i className="bx bxl-instagram"></i>
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             className=" text-darkBlue pl-1 group-hover:text-white text-4xl hover:scale-105 rounded-lg transition-all cursor-pointer"
@@ -101,13 +113,22 @@ export const Header = () => {
         >
           Про нас
         </li>
-        <li className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer">
-          Колектив
+        <li
+          onClick={() => handleScrollToSection("studying")}
+          className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
+        >
+          Навчання
         </li>
-        <li className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer">
-          Школа
+        <li
+          onClick={() => handleScrollToSection("schedule")}
+          className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
+        >
+          Розклад
         </li>
-        <li className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer">
+        <li
+          onClick={() => handleScrollToSection("join")}
+          className="list-none w-full text-center p-4 hover:bg-darkBlue hover:text-white text-darkBlue transition-all cursor-pointer"
+        >
           Приєднатись
         </li>
       </div>

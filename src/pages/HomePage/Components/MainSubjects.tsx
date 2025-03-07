@@ -52,7 +52,10 @@ const subjects: Subject[] = [
 
 export const MainSubjects = () => {
   return (
-    <section className="relative py-24 bg-gradient-to-b from-lightBlue to-lightBlue/80 overflow-hidden border-t-4 border-lightYellow">
+    <section
+      id="studying"
+      className="relative py-24 bg-gradient-to-b from-lightBlue to-lightBlue/80 overflow-hidden border-t-4 border-lightYellow"
+    >
       <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-lightYellow/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-lightYellow/20 rounded-full blur-3xl"></div>
       <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-lightYellow/10 rounded-full blur-2xl"></div>
@@ -60,6 +63,7 @@ export const MainSubjects = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <Typography
+            {...({} as any)}
             variant="h1"
             className="text-darkBlue text-4xl md:text-5xl font-bold mb-4"
           >
@@ -67,12 +71,19 @@ export const MainSubjects = () => {
           </Typography>
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="h-1 w-20 bg-darkBlue rounded-full"></div>
-            <IconButton variant="text" className="bg-darkBlue p-3 rounded-full">
+            <IconButton
+              {...({} as any)}
+              variant="text"
+              className="bg-darkBlue p-3 rounded-full"
+            >
               <i className="bx bxs-school text-2xl text-lightYellow"></i>
             </IconButton>
             <div className="h-1 w-20 bg-darkBlue rounded-full"></div>
           </div>
-          <Typography className="text-darkBlue text-lg max-w-2xl mx-auto">
+          <Typography
+            {...({} as any)}
+            className="text-darkBlue text-lg max-w-2xl mx-auto"
+          >
             Основні предмети спрямовані на всебічний розвиток учнів, поєднуючи
             мовні, математичні, технічні та культурні знання.
           </Typography>
@@ -81,24 +92,31 @@ export const MainSubjects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {subjects.map((subject, index) => (
             <Card
+              {...({} as any)}
               key={index}
               className="bg-darkBlue overflow-hidden transform transition-all duration-300 hover:scale-105"
             >
-              <CardHeader shadow={false} floated={false} className="h-48">
+              <CardHeader
+                {...({} as any)}
+                shadow={false}
+                floated={false}
+                className="h-48"
+              >
                 <img
                   src={subject.image || "/placeholder.svg"}
                   alt={subject.title}
                   className="w-full h-full object-cover"
                 />
               </CardHeader>
-              <CardBody>
+              <CardBody {...({} as any)}>
                 <Typography
+                  {...({} as any)}
                   variant="h4"
                   className="text-lightBlue font-semibold mb-2"
                 >
                   {subject.title}
                 </Typography>
-                <Typography className="text-lightBlue/80">
+                <Typography {...({} as any)} className="text-lightBlue/80">
                   {subject.description}
                 </Typography>
               </CardBody>

@@ -13,6 +13,7 @@ export const Studying = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <Typography
+            {...({} as any)}
             variant="h1"
             className="text-lightYellow text-4xl md:text-5xl font-bold mb-4"
           >
@@ -21,6 +22,7 @@ export const Studying = () => {
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="h-1 w-20 bg-lightYellow rounded-full"></div>
             <IconButton
+              {...({} as any)}
               variant="text"
               className="bg-lightYellow p-3 rounded-full"
             >
@@ -28,7 +30,10 @@ export const Studying = () => {
             </IconButton>
             <div className="h-1 w-20 bg-lightYellow rounded-full"></div>
           </div>
-          <Typography className="text-lightBlue text-lg max-w-2xl mx-auto">
+          <Typography
+            {...({} as any)}
+            className="text-lightBlue text-lg max-w-2xl mx-auto"
+          >
             Наші факультативні заняття сприяють творчому, інтелектуальному та
             фізичному розвитку дітей.
           </Typography>
@@ -63,24 +68,27 @@ export const Studying = () => {
             },
           ].map((item, index) => (
             <Card
+              {...({} as any)}
               key={index}
               className="bg-lightYellow/10 backdrop-blur-md p-8 rounded-2xl shadow-xl transform transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-center gap-4 mb-4">
                 <IconButton
+                  {...({} as any)}
                   variant="text"
                   className="bg-lightYellow p-3 rounded-full"
                 >
                   <i className={`bx ${item.icon} text-2xl text-darkBlue`}></i>
                 </IconButton>
                 <Typography
+                  {...({} as any)}
                   variant="h4"
                   className="text-lightBlue text-lg font-semibold"
                 >
                   {item.title}
                 </Typography>
               </div>
-              <Typography className="text-lightBlue/75">
+              <Typography {...({} as any)} className="text-lightBlue/75">
                 {item.description}
               </Typography>
             </Card>

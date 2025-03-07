@@ -43,11 +43,15 @@ const scheduleItems: ScheduleItem[] = [
 
 export const Schedule = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-darkBlue to-[#1e3a8a]/80">
+    <section
+      id="schedule"
+      className="py-20 bg-gradient-to-b from-darkBlue to-[#1e3a8a]/80"
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
           <Typography
+            {...({} as any)}
             variant="h1"
             className="text-lightYellow text-4xl md:text-5xl font-bold mb-4"
           >
@@ -56,6 +60,7 @@ export const Schedule = () => {
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="h-1 w-20 bg-lightYellow rounded-full"></div>
             <IconButton
+              {...({} as any)}
               variant="text"
               className="bg-lightYellow p-3 rounded-full"
             >
@@ -63,7 +68,10 @@ export const Schedule = () => {
             </IconButton>
             <div className="h-1 w-20 bg-lightYellow rounded-full"></div>
           </div>
-          <Typography className="text-lightBlue text-lg max-w-2xl mx-auto">
+          <Typography
+            {...({} as any)}
+            className="text-lightBlue text-lg max-w-2xl mx-auto"
+          >
             Навчальний день побудований таким чином, щоб забезпечити оптимальний
             баланс між навчанням та відпочинком
           </Typography>
@@ -83,6 +91,7 @@ export const Schedule = () => {
             >
               {/* Time Card */}
               <Card
+                {...({} as any)}
                 className={`w-full md:w-5/12 p-6 bg-lightYellow transform transition-all duration-300 hover:scale-105 ${
                   index === 0 ? "mt-0" : "mt-5"
                 } ${
@@ -90,25 +99,27 @@ export const Schedule = () => {
                 } flex flex-col min-h-[150px]`}
               >
                 <div className="flex items-start gap-4">
-                  <IconButton className="bg-darkBlue">
+                  <IconButton {...({} as any)} className="bg-darkBlue">
                     <i className={`bx ${item.icon} text-xl`}></i>
                   </IconButton>
                   <div>
                     <div className="flex items-baseline gap-2 mb-2">
                       <Typography
+                        {...({} as any)}
                         variant="h4"
                         className="text-darkBlue font-bold"
                       >
                         {item.time}
                       </Typography>
                       <Typography
+                        {...({} as any)}
                         variant="h6"
                         className="text-darkBlue font-medium"
                       >
                         {item.title}
                       </Typography>
                     </div>
-                    <Typography className="text-darkBlue/75">
+                    <Typography {...({} as any)} className="text-darkBlue/75">
                       {item.description}
                     </Typography>
                   </div>
@@ -120,8 +131,12 @@ export const Schedule = () => {
 
         {/* Bottom decoration */}
         <div className="flex justify-center mt-16">
-          <Card className="bg-lightYellow p-4 max-w-lg w-full text-center transform hover:scale-105 transition-transform">
-            <Typography variant="h5" className="text-darkBlue font-medium">
+          <Card {...({} as any)} className="bg-lightYellow p-4 max-w-lg w-full text-center transform hover:scale-105 transition-transform">
+            <Typography
+              {...({} as any)}
+              variant="h5"
+              className="text-darkBlue font-medium"
+            >
               Навчальний день: <span className="font-bold">10:00 - 14:00</span>
             </Typography>
           </Card>

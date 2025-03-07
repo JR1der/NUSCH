@@ -5,9 +5,10 @@ import groupPhoto2 from "../../../assets/groupPhoto2.jpg";
 
 export const BgPhotoComponent = () => {
   return (
-    <div className="relative w-full border-b-4 border-lightYellow">
+    <div id="start" className="relative w-full border-b-4 border-lightYellow">
       {/* Image */}
       <Carousel
+        {...({} as any)}
         autoplay={true}
         loop={true}
         navigation={false}

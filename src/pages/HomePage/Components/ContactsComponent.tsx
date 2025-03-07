@@ -1,15 +1,11 @@
-import { Dialog, DialogHeader, DialogBody, DialogFooter, Button } from "@material-tailwind/react";
+import {
+  Button,
+  Dialog,
+  DialogBody,
+  DialogFooter,
+  DialogHeader,
+} from "@material-tailwind/react";
 import { useState } from "react";
-
-const mapContainerStyle = {
-  width: "100%",
-  height: "400px",
-};
-
-const center = {
-  lat: 49.8743928357043,
-  lng: 8.619049225957264,
-};
 
 const contactInfo = [
   {
@@ -22,11 +18,6 @@ const contactInfo = [
     title: "Email",
     details: ["nuschdarmstadt@gmx.de"],
   },
-  // {
-  //   // icon: Phone,
-  //   title: "Дзвоніть",
-  //   details: ["+380123123123", "+4912312312123"],
-  // },
 ];
 
 export const ContactsComponent = () => {
@@ -71,33 +62,27 @@ export const ContactsComponent = () => {
             ))}
           </div>
         </div>
-
-        {/* Google Maps
-        <div className="h-[400px] w-full border-y-4 border-darkBlue">
-          <LoadScript
-            googleMapsApiKey={import.meta.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
-          >
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              center={center}
-              zoom={15}
-            >
-              <Marker position={center} />
-            </GoogleMap>
-          </LoadScript>
-        </div> */}
       </div>
-      <Dialog open={open} handler={handleOpen} className="bg-lightBlue">
-        <DialogHeader className="text-darkBlue flex justify-center">
+      <Dialog
+        {...({} as any)}
+        open={open}
+        handler={handleOpen}
+        className="bg-lightBlue"
+      >
+        <DialogHeader
+          {...({} as any)}
+          className="text-darkBlue flex justify-center"
+        >
           Запишіть свою дитину
         </DialogHeader>
-        <DialogBody className="text-darkBlue text-center">
+        <DialogBody {...({} as any)} className="text-darkBlue text-center">
           Запис дитини до школи: Надішліть листа на електронну адресу
           <strong>nuschdarmstadt@gmx.de</strong> з інформацією про вашу дитину
           та контактними даними.
         </DialogBody>
-        <DialogFooter>
+        <DialogFooter {...({} as any)}>
           <Button
+            {...({} as any)}
             variant="text"
             color="red"
             onClick={handleOpen}

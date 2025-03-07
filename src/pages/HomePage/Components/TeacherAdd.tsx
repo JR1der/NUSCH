@@ -35,23 +35,33 @@ export const TeacherAdd = () => {
           </p>
 
           <Button
+            {...({} as any)}
             onClick={handleOpen}
             className="bg-darkBlue text-lightYellow hover:bg-yellow hover:text-darkBlue px-12 py-4 rounded-lg text-md md:text-xl font-medium hover:scale-105 transition-all mt-10"
           >
             ДОЛУЧАЙТЕСЬ
           </Button>
 
-          <Dialog open={open} handler={handleOpen} className="bg-lightBlue">
-            <DialogHeader className="text-darkBlue flex justify-center">
+          <Dialog
+            {...({} as any)}
+            open={open}
+            handler={handleOpen}
+            className="bg-lightBlue"
+          >
+            <DialogHeader
+              {...({} as any)}
+              className="text-darkBlue flex justify-center"
+            >
               Приєднання до колективу вчителів
             </DialogHeader>
-            <DialogBody className="text-darkBlue text-center">
+            <DialogBody {...({} as any)} className="text-darkBlue text-center">
               Якщо ви професійний педагог і бажаєте стати частиною нашої
               команди, надішліть своє резюме на електронну адресу
               <strong>nuschdarmstadt@gmx.de</strong>.
             </DialogBody>
-            <DialogFooter>
+            <DialogFooter {...({} as any)}>
               <Button
+                {...({} as any)}
                 variant="text"
                 color="red"
                 onClick={handleOpen}

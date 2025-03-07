@@ -1,11 +1,13 @@
-import { IconButton, Typography } from "@material-tailwind/react";
 import { useState } from "react";
 
 export const AboutUsComponent = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-darkBlue to-[#1e3a8a]/80 overflow-hidden">
+    <section
+      id="about-us"
+      className="relative py-24 bg-gradient-to-b from-darkBlue to-[#1e3a8a]/80 overflow-hidden"
+    >
       {/* Background Decorations */}
       <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-lightYellow/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-lightYellow/20 rounded-full blur-3xl"></div>
@@ -15,20 +17,14 @@ export const AboutUsComponent = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <Typography
-            variant="h1"
-            className="text-lightYellow text-5xl md:text-6xl font-extrabold mb-6"
-          >
+          <h1 className="text-lightYellow text-5xl md:text-6xl font-extrabold mb-6">
             ПРО НАС
-          </Typography>
+          </h1>
           <div className="flex items-center justify-center gap-5">
             <div className="h-1 w-24 bg-lightYellow rounded-full"></div>
-            <IconButton
-              variant="text"
-              className="bg-lightYellow p-4 rounded-full w-20 h-20 flex items-center justify-center"
-            >
+            <button className="bg-lightYellow p-4 rounded-full w-20 h-20 flex items-center justify-center">
               <i className="bx bx-book-heart text-3xl text-darkBlue"></i>
-            </IconButton>
+            </button>
             <div className="h-1 w-24 bg-lightYellow rounded-full"></div>
           </div>
         </div>
@@ -37,58 +33,52 @@ export const AboutUsComponent = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Welcome Section */}
           <div className="flex flex-col items-center gap-12 mb-20">
-            <Typography
-              variant="h3"
-              className="text-lightYellow text-3xl md:text-5xl font-extrabold mb-6"
-            >
+            <h3 className="text-lightYellow text-3xl md:text-5xl font-extrabold mb-6">
               Ласкаво просимо до Нової української школи в місті Дармштадт!
-            </Typography>
+            </h3>
             <div className="bg-lightYellow/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
-              <Typography className="text-lightBlue text-xl md:text-2xl leading-relaxed">
+              <p className="text-lightBlue text-xl md:text-2xl leading-relaxed">
                 Наша школа, відкрита 1 червня 2024 року, пропонує якісну освіту
-                для українських дітей у Німеччині. Ми проводимо заняття
-                виключно українською та німецькою мовами, забезпечуючи двомовне
-                навчання для наших учнів.
-              </Typography>
+                для українських дітей у Німеччині. Ми проводимо заняття виключно
+                українською та німецькою мовами, забезпечуючи двомовне навчання
+                для наших учнів.
+              </p>
             </div>
           </div>
 
           {/* Why Choose Us Section */}
           <div className="flex flex-col items-center gap-12">
-            <Typography
-              variant="h4"
-              className="text-lightYellow text-3xl md:text-4xl font-extrabold mb-6"
-            >
+            <h4 className="text-lightYellow text-3xl md:text-4xl font-extrabold mb-6">
               Чому варто обрати нашу школу?
-            </Typography>
+            </h4>
             <div
               className={`transition-all duration-500 ease-in-out ${
                 isExpanded ? "opacity-100 max-h-screen" : "opacity-0 max-h-0"
               } overflow-hidden`}
             >
               <div className="space-y-6 bg-lightYellow/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
-                <Typography className="text-lightBlue text-lg md:text-xl leading-relaxed">
+                <p className="text-lightBlue text-lg md:text-xl leading-relaxed">
                   Наша школа створена для того, щоб забезпечити дітей якісною
-                  освітою в українському середовищі, підтримуючи їхній зв’язок
-                  з рідною культурою. Ми прагнемо, щоб навчання було не тільки
+                  освітою в українському середовищі, підтримуючи їхній зв’язок з
+                  рідною культурою. Ми прагнемо, щоб навчання було не тільки
                   корисним, а й цікавим!
-                </Typography>
-                <Typography className="text-lightBlue text-lg md:text-xl leading-relaxed">
+                </p>
+                <p className="text-lightBlue text-lg md:text-xl leading-relaxed">
                   📚 Комплексний підхід – наші заняття поєднують традиційні
                   методики викладання з інтерактивними підходами.
-                </Typography>
-                <Typography className="text-lightBlue text-lg md:text-xl leading-relaxed">
+                </p>
+                <p className="text-lightBlue text-lg md:text-xl leading-relaxed">
                   🌍 Двомовне середовище – навчання ведеться українською та
                   німецькою мовами, сприяючи гармонійному розвитку дітей.
-                </Typography>
-                <Typography className="text-lightBlue text-lg md:text-xl leading-relaxed">
-                  🎭 Культурна складова – окрім навчальних дисциплін, ми
-                  активно залучаємо дітей до українських традицій.
-                </Typography>
-                <Typography className="text-lightBlue text-lg md:text-xl leading-relaxed">
-                  🤝 Дружня атмосфера – кожна дитина отримує увагу та
-                  підтримку, що допомагає їй почуватися комфортно.
-                </Typography>
+                </p>
+                <p className="text-lightBlue text-lg md:text-xl leading-relaxed">
+                  🎭 Культурна складова – окрім навчальних дисциплін, ми активно
+                  залучаємо дітей до українських традицій.
+                </p>
+                <p className="text-lightBlue text-lg md:text-xl leading-relaxed">
+                  🤝 Дружня атмосфера – кожна дитина отримує увагу та підтримку,
+                  що допомагає їй почуватися комфортно.
+                </p>
               </div>
             </div>
             <button
