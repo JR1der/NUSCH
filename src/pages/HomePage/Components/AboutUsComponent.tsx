@@ -38,7 +38,7 @@ export const AboutUsComponent = () => {
             </h3>
             <div className="bg-lightYellow/10 backdrop-blur-md p-8 rounded-2xl shadow-lg">
               <p className="text-lightBlue text-xl md:text-2xl leading-relaxed">
-                Наша школа, відкрита 1 вересня 2024 року, пропонує якісну освіту
+                Наша школа, відкрита 1 червня 2024 року, пропонує якісну освіту
                 для українських дітей у Німеччині. Ми проводимо заняття виключно
                 українською та німецькою мовами, забезпечуючи двомовне навчання
                 для наших учнів.
