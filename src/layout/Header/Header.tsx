@@ -96,12 +96,12 @@ export const Header = () => {
 
       {/* Mobile Menu Icon */}
       <i
-        className="bx bx-menu xl:hidden text-4xl cursor-pointer"
+        className="bx bx-menu xl:hidden text-4xl cursor-pointer text-darkBlue"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       ></i>
 
       <div
-        className={`${cls} absolute xl:hidden top-24 left-0 w-full border-y-2 border-darkBlue bg-lightBlue flex flex-col items-center gap-7 font-semibold text-lg transform transition-transform ${
+        className={`${cls} absolute xl:hidden top-full left-0 w-full border-y-2 border-darkBlue bg-lightBlue flex flex-col items-center gap-7 font-semibold text-lg transform transition-transform ${
           isMenuOpen ? "opacity-100" : "opacity-0"
         }`}
         style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}
